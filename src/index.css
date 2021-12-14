@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  font-size: 16px;
+
+  /* Primary */
+  --soft_blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --very_dark_blue_main: hsl(217, 54%, 11%); /* (main BG) */
+  --very_dark_blue_card: hsl(216, 50%, 16%); /* (card BG) */
+  --very_dark_blue_line: hsl(215, 32%, 27%); /* (line) */
+  --white: hsl(0, 0%, 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: var(--very_dark_blue_main);
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  height: 59.2px;
+}
+
+main {
+  background: var(--very_dark_blue_card);
+  padding: 1.5rem;
+  width: calc(375px - 3rem);
+  margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: -1rem 2.5rem 0.5rem hsl(217, 55%, 10%),
+    1rem 2.5rem 0.5rem hsl(217, 55%, 10%), -3.5rem 4.5rem hsl(216, 57%, 11%),
+    3.5rem 4.5rem hsl(216, 57%, 11%);
+}
+
+main > p {
+  line-height: 150%;
+}
+
+p {
+  color: var(--soft_blue);
+}
+
+footer {
+  text-align: center;
+  padding: 0rem 1rem;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+h1:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+a {
+  color: var(--white);
 }
